@@ -46,10 +46,6 @@ def writing_to_the_database(file_name: list, name_database: str) -> None:
             cur.executemany(f"INSERT INTO {name_database} VALUES ({create_symbols(file_name)})", file_name)
             cur.execute("SELECT * FROM customers")
 
-            # rows = cur.fetchall()
-            # for row in rows:
-            #     print(row)
-
     conn.close()
 
 
